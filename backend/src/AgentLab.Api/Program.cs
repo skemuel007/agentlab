@@ -11,7 +11,7 @@ builder.WebHost.UseUrls("http://localhost:5080");
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("ReactDev", policy =>
-        policy.WithOrigins("http://localhost:5176")
+        policy.WithOrigins(builder.Configuration["ALLOWED_ORIGINS"]?.Split(',') ?? Array.Empty<string>())
               .AllowAnyHeader()
               .AllowAnyMethod());
 });
