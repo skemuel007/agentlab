@@ -1,0 +1,106 @@
+# ===== .NET / C# =====
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.vs/
+*.swp
+*_i.c
+*_p.c
+*_h.h
+*.ilk
+*.meta
+*.obj
+*.iobj
+*.pch
+*.pdb
+*.ipdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*_wpftmp.csproj
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.svclog
+*.scc
+_Chutzpah*
+ipch/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+publish/
+*.[Cc]ache
+# dotenv / secrets
+*.env
+.env
+.env.*
+!.env.example
+appsettings.Development.json
+secrets.json
+# NuGet
+*.nupkg
+*.snupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+*.nuget.props
+*.nuget.targets
+project.lock.json
+project.fragment.lock.json
+artifacts/
+# Rider / JetBrains
+.idea/
+*.sln.iml
+# macOS
+.DS_Store
+
+# ===== Node / React / Vite =====
+node_modules/
+dist/
+dist-ssr/
+*.local
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
+.output/
+.vuepress/dist
+.serverless/
+.fusebox/
+.dynamodb/
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+# dotenv frontend
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sw?
