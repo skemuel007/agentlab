@@ -5,6 +5,12 @@ import "./App.css";
 type Message = {
   role: "user" | "assistant";
   content: string;
+  agentId?: string;
+};
+
+type ChatResponse = {
+  agentId: string;
+  reply: string;
 };
 
 export default function App() {
@@ -40,11 +46,15 @@ export default function App() {
         throw new Error("The chat request failed.");
       }
 
-      const data: { reply: string } = await response.json();
+      const data: ChatResponse = await response.json();
 
       setMessages(previous => [
         ...previous,
-        { role: "assistant", content: data.reply }
+        {
+          role: "assistant",
+          content: data.reply,
+          agentId: data.agentId
+        }
       ]);
     } catch {
       setMessages(previous => [
@@ -68,7 +78,9 @@ export default function App() {
         {messages.map((message, index) => (
           <div key={index}>
             <strong>
-              {message.role === "user" ? "You" : "Agent"}
+              {message.role === "user"
+                ? "You"
+                : message.agentId ?? "Agent"}
             </strong>
             <p>{message.content}</p>
           </div>
